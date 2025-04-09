@@ -1,285 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="transition duration-300">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Fernando D. Pititto</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
-
-    <!-- Custom CSS -->
-    <link href="css/styles.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Consultancy Company</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            base: '#fdf6ef',
+            accent: '#ff6b00',
+            'accent-dark': '#e65f00',
+            'dark-bg': '#1f1f1f',
+            'dark-card': '#2a2a2a'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
 
-<body id="page-top">
-    <div class="container-fluid p-0">
-        <!-- Add scrollable container -->
-        <div class="scroll-container">
-            <!-- Page Content-->
-            <div class="container-fluid p-0">
-                <!-- About-->
-                <section class="resume-section" id="about">
-                    <div class="resume-section-content">
-                        <img src="assets/img/profile.png" id="profilepic" alt="Profile Picture">
-                        <div>
-                            <h1 class="mb-0">
-                                Fernando D.
-                                <span class="text-primary">Pititto</span>
-                            </h1>
-                            <div class="subheading mb-5">
-                                <span class="text-primary">Data Analyst</span>
-                            </div>
-                            <div class="social-icons">
-                                <a class="social-icon"
-                                    href="https://www.linkedin.com/in/fernando-daniel-pititto-67aa74142"><i
-                                        class="fab fa-linkedin-in"></i></a>
-                                <a class="social-icon" href="https://github.com/ferpitt"><i
-                                        class="fab fa-github"></i></a>
-                                <a class="social-icon" href="mailto:pitittofernando@gmail.com"><i
-                                        class="fa fa-envelope"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <hr class="m-0" />
-                <!-- Experience-->
-                <section class="resume-section" id="experience">
-                    <div class="resume-section-content">
-                        <h2 class="mb-5" id="experience-title"></h2>
-                        <div class="experience-columns">
-                            <div class="current-job-card">
-                                <img src="https://play-lh.googleusercontent.com/uxHZbrC3ReVDRMOAJuugukR4qlIFt1H3ho8L_67cYhLh9G_P0kUPAJtfX6L22hAxfHv4"
-                                    alt="Galicia Bank Icon">
-                                <div class="content">
-                                    <h3 style="margin-bottom: 5px;">Data Analysis Lead</h3>
-                                    <h4 style="margin: 0; color: #999999; font-weight: normal;">at Galicia Bank</h4>
-                                    <p id="galicia-duration"></p>
-                                    <p>Buenos Aires, Argentina</p>
-                                    <div style="font-size: 1.5em; margin: 15px 0; text-align: left;">
-                                        <span
-                                            style="display: inline-block; margin: 5px 20px 5px 0; font-size: 0.7em;"><i
-                                                class="fas fa-chart-line"></i>&nbsp;&nbsp;Analytics</span>
-                                        <span 
-                                            style="display: inline-block; margin: 5px 20px 5px 0; font-size: 0.7em;"><i 
-                                                class="fab fa-microsoft"></i>&nbsp;&nbsp;Fabric</span>
-                                        <span
-                                            style="display: inline-block; margin: 5px 20px 5px 0; font-size: 0.7em;"><i
-                                                class="fas fa-cogs"></i>&nbsp;&nbsp;Data Engineering</span>
-                                    </div>
-                                    <p>Spearheaded a data analytics team delivering critical insights to Engineering
-                                        leadership. Built and maintained a comprehensive BI ecosystem powering 5+
-                                        reports through 15 data sources, directly impacting development process
-                                        decisions.</p>
-                                    <p>Developed KPIs that led to 30% improvement in performance test coverage and
-                                        significant enhancement in code quality standards across development teams.</p>
-                                </div>
-                            </div>
-                            <div class="job-card-container">
-                                <div class="job-card"
-                                    data-details='{"title":"Senior Data Analyst","company":"TCS","duration":"Feb 2022 - Aug 2023","location":"Buenos Aires, Argentina","description":"Revolutionized department metrics by implementing new PowerBI dashboards that increased data visibility by 40%. Created innovative internal analytics tools that uncovered hidden opportunities in unexplored data fields, driving multiple development initiatives and improving decision-making process.","skills":"<i class=\"fab fa-python\"></i> <i class=\"fa fa-database\"></i> <i class=\"fas fa-chart-line\"></i> <i class=\"far fa-chart-bar\"></i>"}'>
-                                    <div class="h5c">
-                                        <img src="https://th.bing.com/th/id/OIP.J-UWEEp6tnF6gCnC9Wt6UAAAAA?rs=1&pid=ImgDetMain"
-                                            alt="icon" class="past-jobs-icon">
-                                        <div class="text-content">
-                                            <h4 class="mb-0">Sr. Data Analyst</h4>
-                                            <p>1 year 7 months</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="job-card"
-                                    data-details='{"title":"Business Intelligence Developer","company":"IMR & Asociados","duration":"May 2022 - Aug 2022","location":"Buenos Aires, Argentina","description":"Successfully migrated and optimized TECPETROLs BI infrastructure to Power BI, resulting in 25% faster data processing. Implemented efficient ETL pipelines using Power Query and Azure Data Factory, reducing data refresh time by 35%.","skills":"<i class=\"fa fa-database\"></i> <i class=\"fas fa-server\"></i> <i class=\"far fa-chart-bar\"></i>"}'>
-                                    <div class="h5c">
-                                        <img src="https://media.licdn.com/dms/image/v2/D4D0BAQEmpCUj6Pn2Ng/company-logo_200_200/company-logo_200_200/0/1712953706893/imr_asociados_logo?e=1749081600&v=beta&t=-RRS_i3b_b526je_UYiZkyuaC-aGRSNR4l1ypH65wNQ"
-                                            alt="icon" class="past-jobs-icon">
-                                        <div class="text-content">
-                                            <h4 class="mb-0">BI Developer</h4>
-                                            <p>4 months</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="job-card"
-                                    data-details='{"title":"Data Analyst","company":"RAGHSA","duration":"Jun 2017 - Feb 2022","location":"Buenos Aires, Argentina","description":"Developed two high-impact solutions: An automated presenteeism system that reduced reporting time by 60% and improved data accuracy by 40%, and a SharePoint-embedded financial analysis tool that increased client satisfaction by 45% through improved business metrics visibility.","skills":"<i class=\"far fa-chart-bar\"></i> <i class=\"fab fa-python\"></i> <i class=\"fab fa-microsoft\"></i> <i class=\"fab fa-js-square\"></i>"}'>
-                                    <div class="h5c">
-                                        <img src="https://play-lh.googleusercontent.com/0jbVJtC35MHqf1vYqnwjJ3PxQOv3USbBhxSw0eol1fXsi39jUZcExAV-8hwTmtFBMw"
-                                            alt="icon" class="past-jobs-icon" style="background-color: gray;">
-                                        <div class="text-content">
-                                            <h4 class="mb-0">Data Analyst</h4>
-                                            <p>4 years 9 months</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="job-card"
-                                    data-details='{"title":"Facilities Manager","company":"The Church of Jesus Christ of Latter-day Saints","duration":"Apr 2015 - May 2017","location":"Rosario city, Santa Fe, Argentina","description":"Designed and implemented a property management system that reduced contract processing time by 50% and improved payment resolution efficiency by 35%. Streamlined administrative procedures resulting in 40% faster response times for facility-related requests.","skills":"<i class=\"far fa-file-excel\"></i> <i class=\"far fa-file-powerpoint\"></i>"}'>
-                                    <div class="h5c">
-                                        <img src="https://media-exp1.licdn.com/dms/image/C560BAQFniFhKWARtkA/company-logo_200_200/0/1586051202536?e=2159024400&v=beta&t=RhtkGgeE0cgTIj5TYlhRX3Oq00FwVYPU-LMj0HimFcY"
-                                            alt="icon">
-                                        <div class="text-content">
-                                            <h4 class="mb-0">Facilities Manager</h4>
-                                            <p>2 years</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <hr class="m-0" />
-                <!-- Development -->
-                <section class="resume-section" id="development">
-                    <div class="resume-section-content">
-                        <h2 class="mb-5">Development</h2>
-                        <div class="development-section">
-                            <div class="tools-list">
-                                <h3>Education & Certifications</h3>
-                                <div class="education-item">
-                                    <h4>National Technological University (UTN)</h4>
-                                    <p class="year">2015 - 2018</p>
-                                    <p>Information Systems Engineering</p>
-                                </div>
-                                <div class="education-item">
-                                    <h4>Microsoft</h4>
-                                    <p class="year">2023</p>
-                                    <p>Power BI Data Analyst Associate (PL-300)</p>
-                                </div>
-                                <div class="education-item">
-                                    <h4>DataCamp</h4>
-                                    <p class="year">2022</p>
-                                    <p>Data Analyst with Python Track</p>
-                                </div>
-                            </div>
-                            <div class="education-list">
-                                <h3>Technical Skills</h3>
-                                <div class="tools-stack">
-                                    <div class="tool-card">
-                                        <div class="tool-icon">
-                                            <i class="fab fa-python"></i>
-                                        </div>
-                                        <div class="tool-info">
-                                            <h4 class="tool-name">Python</h4>
-                                            <p class="tool-hours">Data Analysis & Automation</p>
-                                        </div>
-                                    </div>
-                                    <div class="tool-card">
-                                        <div class="tool-icon">
-                                            <i class="fas fa-database"></i>
-                                        </div>
-                                        <div class="tool-info">
-                                            <h4 class="tool-name">SQL</h4>
-                                            <p class="tool-hours">Data Querying & Management</p>
-                                        </div>
-                                    </div>
-                                    <div class="tool-card">
-                                        <div class="tool-icon">
-                                            <i class="fab fa-microsoft"></i>
-                                        </div>
-                                        <div class="tool-info">
-                                            <h4 class="tool-name">Power BI</h4>
-                                            <p class="tool-hours">Business Intelligence & Reporting</p>
-                                        </div>
-                                    </div>
-                                    <div class="tool-card">
-                                        <div class="tool-icon">
-                                            <i class="fab fa-js-square"></i>
-                                        </div>
-                                        <div class="tool-info">
-                                            <h4 class="tool-name">JavaScript</h4>
-                                            <p class="tool-hours">Web Development & Data Visualization</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <hr class="m-0" />
-                <!-- Skills-->
-                <section class="resume-section" id="skills">
-                    <div class="resume-section-content">
-                        <h2 class="mb-5">Skills</h2>
-                        <div class="subheading mb-3">Programming Languages & Tools</div>
-                        <ul id="skills_icons" class="list-inline dev-icons">
-                            <li class="list-inline-item "><i class="fab fa-fw fa-js-square"></i>
-                                <p class="list-inline-item fs-4">Javascript</p>
-                            </li>
-                            <li class="list-inline-item"><i class="fab fa-fw fa-python"></i>
-                                <p class="list-inline-item fs-4">Python</p>
-                            </li>
-                            <li class="list-inline-item"><i class="fa fa-fw fa-database"></i>
-                                <p class="list-inline-item fs-4">SQL</p>
-                            </li>
-                            <li class="list-inline-item"><i class="far fa-fw fa-chart-bar"></i>
-                                <p class="list-inline-item fs-4">Power BI</p>
-                            </li>
-                            <li class="list-inline-item"><i class="far fa-fw fa-file-excel"></i>
-                                <p class="list-inline-item fs-4">Excel</p>
-                            </li>
+<body class="bg-base text-gray-800 dark:bg-dark-bg dark:text-white transition duration-300">
 
-                        </ul>
-                        <div class="subheading mb-3">Workflow</div>
-                        <ul class="fa-ul mb-0">
-                            <p>> SQL
-                                > NOSQL
-                                > Power BI
-                                > Python
-                                > Pandas
-                                > Matplotlib
-                                > Scikit Learn
-                                > Javascript
-                                > Highcharts
-                                > D3
-                                > Data Analytics
-                                > Machine Learning
-                                > MS Sharepoint
-                                > Power Automate
-                                > HTML
-                            </p>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-check"></i></span>
-                                Mobile-First, Responsive Design
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-check"></i></span>
-                                Cross Browser Testing & Debugging
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-check"></i></span>
-                                Cross Functional Teams
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-check"></i></span>
-                                Agile Development & Scrum
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <hr class="m-0" />
-                <!-- Interests-->
-                <section class="resume-section" id="contact">
-                    <div class="resume-section-content">
-                        <h2 class="mb-5">Get in touch</h2>
-                        <p>I am open to discussing professional opportunities and collaborations in data analytics,
-                            technology, and related fields.</p>
-                        <p class="mb-0">Please feel free to connect through any of the following channels:</p>
-                        <div class="social-icons">
-                            <a class="social-icon"
-                                href="https://www.linkedin.com/in/fernando-daniel-pititto-67aa74142"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                            <a class="social-icon" href="https://github.com/ferpitt"><i class="fab fa-github"></i></a>
-                            <a class="social-icon" href="mailto:pitittofernando@gmail.com"><i
-                                    class="fa fa-envelope"></i></a>
-                        </div>
-                    </div>
-                </section>
-                <hr class="m-0" />
-            </div>
-        </div>
+  <!-- Dark Mode Toggle -->
+  <div class="p-4 flex justify-end">
+    <button id="darkModeToggle"
+      class="bg-accent text-white hover:bg-accent-dark px-4 py-2 rounded-lg transition duration-300">
+      Toggle Dark Mode
+    </button>
+  </div>
+
+  <!-- Header -->
+  <header class="min-h-screen flex items-center justify-center px-6">
+    <div class="text-center max-w-4xl">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">Empowering Your Business with Data-Driven Solutions</h1>
+      <p class="text-lg sm:text-xl md:text-2xl mb-8">We help companies turn data into strategic decisions.</p>
+      <a href="#contact"
+        class="inline-block bg-accent hover:bg-accent-dark text-white font-semibold py-3 px-6 rounded-xl transition duration-300">Let’s
+        Work Together</a>
     </div>
-    <!-- Custom JS -->
-    <script src="js/scripts.js"></script>
-</body>
+  </header>
 
+  <!-- Benefits Section -->
+  <section class="py-16 bg-white dark:bg-dark-card transition duration-300">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">What You’ll Gain</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-base dark:bg-dark-bg p-6 rounded-xl shadow text-center">
+          <h3 class="text-xl font-semibold mb-3 text-accent">Faster Decision-Making</h3>
+          <p class="text-gray-700 dark:text-gray-300">We create dashboards and automation tools that speed up your business insights.</p>
+        </div>
+        <div class="bg-base dark:bg-dark-bg p-6 rounded-xl shadow text-center">
+          <h3 class="text-xl font-semibold mb-3 text-accent">Process Optimization</h3>
+          <p class="text-gray-700 dark:text-gray-300">Identify and fix inefficiencies with data-driven process mapping and improvement.</p>
+        </div>
+        <div class="bg-base dark:bg-dark-bg p-6 rounded-xl shadow text-center">
+          <h3 class="text-xl font-semibold mb-3 text-accent">Tech Empowerment</h3>
+          <p class="text-gray-700 dark:text-gray-300">Get modern systems in place – from data pipelines to predictive analytics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages Carousel -->
+  <section class="py-16 bg-base dark:bg-dark-bg transition duration-300">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Our Packages</h2>
+      <div id="dragScroll" class="flex overflow-x-auto space-x-6 pb-4 cursor-grab">
+
+        <!-- Card -->
+        <div class="min-w-[280px] sm:min-w-[300px] bg-accent/10 dark:bg-accent/20 rounded-2xl shadow-md p-6 flex-shrink-0">
+          <h3 class="text-lg font-bold mb-2 text-accent">Starter Pack</h3>
+          <ul class="list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
+            <li>Basic dashboards</li>
+            <li>Weekly reporting</li>
+            <li>1 automated ETL flow</li>
+          </ul>
+        </div>
+
+        <!-- Card -->
+        <div class="min-w-[280px] sm:min-w-[300px] bg-accent/10 dark:bg-accent/20 rounded-2xl shadow-md p-6 flex-shrink-0">
+          <h3 class="text-lg font-bold mb-2 text-accent">Growth Pack</h3>
+          <ul class="list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
+            <li>Advanced dashboards</li>
+            <li>Process automation</li>
+            <li>2 predictive models</li>
+          </ul>
+        </div>
+
+        <!-- Card -->
+        <div class="min-w-[280px] sm:min-w-[300px] bg-accent/10 dark:bg-accent/20 rounded-2xl shadow-md p-6 flex-shrink-0">
+          <h3 class="text-lg font-bold mb-2 text-accent">Enterprise Pack</h3>
+          <ul class="list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
+            <li>Full BI platform</li>
+            <li>Custom AI tools</li>
+            <li>Onboarding + Training</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Past Customers -->
+  <section class="py-16 bg-white dark:bg-dark-card transition duration-300">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Trusted by Companies Like</h2>
+
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-center text-center text-gray-600 dark:text-gray-300">
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">Acme Corp</span>
+        </div>
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">FinData Inc.</span>
+        </div>
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">Logistics+ AI</span>
+        </div>
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">Retailify</span>
+        </div>
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">BankPro</span>
+        </div>
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">InsightFlow</span>
+        </div>
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">AlphaTech</span>
+        </div>
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">Urban Data Co.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="carousel.js"></script>
+  <script>
+    const toggle = document.getElementById("darkModeToggle");
+    const htmlEl = document.documentElement;
+    const bodyEl = document.body;
+
+    toggle.addEventListener("click", () => {
+      htmlEl.classList.toggle("dark");
+      bodyEl.classList.toggle("dark");
+      const isDark = htmlEl.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const theme = localStorage.getItem("theme");
+      if (theme === "dark") {
+        htmlEl.classList.add("dark");
+        bodyEl.classList.add("dark");
+      }
+    });
+  </script>
+</body>
 </html>
