@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="transition duration-300">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Consultancy Company</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            base: '#fdf6ef',
+            accent: '#ff6b00',
+            'accent-dark': '#e65f00',
+            'dark-bg': '#1f1f1f',
+            'dark-card': '#2a2a2a'
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-base text-gray-800 dark:bg-dark-bg dark:text-white transition duration-300">
+
+  <!-- Dark Mode Toggle -->
+  <div class="p-4 flex justify-end">
+    <button id="darkModeToggle"
+      class="bg-accent text-white hover:bg-accent-dark px-4 py-2 rounded-lg transition duration-300">
+      Toggle Dark Mode
+    </button>
+  </div>
+
+  <!-- Header -->
+  <header class="min-h-screen flex items-center justify-center px-6">
+    <div class="text-center max-w-4xl">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">Empowering Your Business with Data-Driven Solutions</h1>
+      <p class="text-lg sm:text-xl md:text-2xl mb-8">We help companies turn data into strategic decisions.</p>
+      <a href="#contact"
+        class="inline-block bg-accent hover:bg-accent-dark text-white font-semibold py-3 px-6 rounded-xl transition duration-300">Let’s
+        Work Together</a>
+    </div>
+  </header>
+
+  <!-- Benefits Section -->
+  <section class="py-16 bg-white dark:bg-dark-card transition duration-300">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">What You’ll Gain</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-base dark:bg-dark-bg p-6 rounded-xl shadow text-center">
+          <h3 class="text-xl font-semibold mb-3 text-accent">Faster Decision-Making</h3>
+          <p class="text-gray-700 dark:text-gray-300">We create dashboards and automation tools that speed up your business insights.</p>
+        </div>
+        <div class="bg-base dark:bg-dark-bg p-6 rounded-xl shadow text-center">
+          <h3 class="text-xl font-semibold mb-3 text-accent">Process Optimization</h3>
+          <p class="text-gray-700 dark:text-gray-300">Identify and fix inefficiencies with data-driven process mapping and improvement.</p>
+        </div>
+        <div class="bg-base dark:bg-dark-bg p-6 rounded-xl shadow text-center">
+          <h3 class="text-xl font-semibold mb-3 text-accent">Tech Empowerment</h3>
+          <p class="text-gray-700 dark:text-gray-300">Get modern systems in place – from data pipelines to predictive analytics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages Carousel -->
+  <section class="py-16 bg-base dark:bg-dark-bg transition duration-300">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Our Packages</h2>
+      <div id="dragScroll" class="flex overflow-x-auto space-x-6 pb-4 cursor-grab">
+
+        <!-- Card -->
+        <div class="min-w-[280px] sm:min-w-[300px] bg-accent/10 dark:bg-accent/20 rounded-2xl shadow-md p-6 flex-shrink-0">
+          <h3 class="text-lg font-bold mb-2 text-accent">Starter Pack</h3>
+          <ul class="list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
+            <li>Basic dashboards</li>
+            <li>Weekly reporting</li>
+            <li>1 automated ETL flow</li>
+          </ul>
+        </div>
+
+        <!-- Card -->
+        <div class="min-w-[280px] sm:min-w-[300px] bg-accent/10 dark:bg-accent/20 rounded-2xl shadow-md p-6 flex-shrink-0">
+          <h3 class="text-lg font-bold mb-2 text-accent">Growth Pack</h3>
+          <ul class="list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
+            <li>Advanced dashboards</li>
+            <li>Process automation</li>
+            <li>2 predictive models</li>
+          </ul>
+        </div>
+
+        <!-- Card -->
+        <div class="min-w-[280px] sm:min-w-[300px] bg-accent/10 dark:bg-accent/20 rounded-2xl shadow-md p-6 flex-shrink-0">
+          <h3 class="text-lg font-bold mb-2 text-accent">Enterprise Pack</h3>
+          <ul class="list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
+            <li>Full BI platform</li>
+            <li>Custom AI tools</li>
+            <li>Onboarding + Training</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Past Customers -->
+  <section class="py-16 bg-white dark:bg-dark-card transition duration-300">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Trusted by Companies Like</h2>
+
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-center text-center text-gray-600 dark:text-gray-300">
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">Acme Corp</span>
+        </div>
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">FinData Inc.</span>
+        </div>
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">Logistics+ AI</span>
+        </div>
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">Retailify</span>
+        </div>
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">BankPro</span>
+        </div>
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">InsightFlow</span>
+        </div>
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">AlphaTech</span>
+        </div>
+        <div class="p-4 bg-base dark:bg-dark-bg rounded-lg shadow-md">
+          <span class="block font-semibold text-lg">Urban Data Co.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="carousel.js"></script>
+  <script>
+    const toggle = document.getElementById("darkModeToggle");
+    const htmlEl = document.documentElement;
+    const bodyEl = document.body;
+
+    toggle.addEventListener("click", () => {
+      htmlEl.classList.toggle("dark");
+      bodyEl.classList.toggle("dark");
+      const isDark = htmlEl.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const theme = localStorage.getItem("theme");
+      if (theme === "dark") {
+        htmlEl.classList.add("dark");
+        bodyEl.classList.add("dark");
+      }
+    });
+  </script>
+</body>
+</html>
