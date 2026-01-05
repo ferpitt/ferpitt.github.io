@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro diario de hábitos</title>
+</head>
+<body>
+
+<h3>Registro diario</h3>
+
+<div>
+  Fecha:
+  <span id="fecha"></span>
+</div>
+
+<br>
+
+<textarea
+  id="input"
+  rows="12"
+  cols="32"
+  placeholder="[GYM] ✔ Entrené 40 min
+[LECTURA] ✘ No leí
+[MEDITACION] ✔ 10 min">
+</textarea>
+
+<br><br>
+
+<button onclick="agregarEntrada()">Agregar entrada</button>
+<button onclick="descargarTxt()">Descargar .txt</button>
+<button onclick="limpiarDia()">Limpiar día</button>
+
+<hr>
+
+<pre id="log"></pre>
+
+<script>
+  const hoy = new Date().toISOString().slice(0, 10);
+  document.getElementById("fecha").innerText = hoy;
+
+  const storageKey = `registro_${hoy}`;
+  const logEl = document.getElementById("log");
+
+  // Cargar datos guardados
+  logEl.textContent = localStorage.getItem(storageKey) || "";
+
+  function agregarEntrada() {
+    const texto = document.getElementById("input").value.trim();
+    if (!texto) return;
+
+    const ahora = new Date().toLocaleTimeString();
+    const entrada = `[${ahora}] ${texto}\n`;
+
+    logEl.textContent += entrada;
+    localStorage.setItem(storageKey, logEl.textContent);
+
+    document.getElementById("input").value = "";
+  }
+
+  function descargarTxt() {
+    const contenido = logEl.textContent;
+    if (!contenido) {
+      alert("No hay contenido para descargar");
+      return;
+    }
+
+    const blob = new Blob([contenido], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `habitos_${hoy}.txt`;
+    a.click();
+
+    URL.revokeObjectURL(url);
+  }
+
+  function limpiarDia() {
+    if (!confirm("¿Seguro que querés borrar el registro de hoy?")) return;
+    localStorage.removeItem(storageKey);
+    logEl.textContent = "";
+  }
+</script>
+
+</body>
+</html>
